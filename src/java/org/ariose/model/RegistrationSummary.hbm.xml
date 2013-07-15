@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+    Created on : April 02, 2009, 3:18 PM
+    Author     : A.Rahman
+    Description: Purpose of the document is to map RegistrationSummary class with the grace_active table in the DataBase.
+-->
+
+<hibernate-mapping>
+    <class name="org.ariose.model.RegistrationSummary" table="registration_summary">
+
+        <id name="id" column="id" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+        <property name="totalAttempts" column="total_attempts" not-null="false"/>
+        <property name="chargingSuccess" column="charging_success" not-null="false"/>
+        <property name="lowBalanceFailure" column="low_balance_failure" not-null="false"/>
+        <property name="technicalErrorFailure" column="technical_error_failure" not-null="false"/>
+        <property name="noGatewayResponse" column="no_gateway_response" not-null="false"/>
+        <property name="pendingRegistration" column="pending_registration" not-null="false"/>
+        <property name="currentDate" column="today_date" not-null="false"/>
+    </class>
+</hibernate-mapping>

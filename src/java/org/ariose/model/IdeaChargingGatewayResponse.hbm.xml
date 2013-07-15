@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!--
+		Document : IdeaChargingGatewayResponse.hbm.xml 
+		Created on : Jan 2011 
+		Author : Manu Parmar 
+		Description: Purpose of the document is to map IdeaChargingGatewayResponseBean
+		class with the idea_charging_gateway_response table in the DataBase.
+	-->
+<hibernate-mapping>
+	<class name="org.ariose.model.IdeaChargingGatewayResponseBean" table="idea_charging_gateway_response">
+		<id name="id" column="id" unsaved-value="0">
+			<generator class="native" />
+		</id>
+		<property name="subscriberNumber" />
+		<property name="packId"/>
+		<property name="packName"/>
+		<property name="svcKey"/>
+		<property name="subscriptionId"/>
+		<property name="chTranactionLogxId"/>
+		<property name="httpResponseCode"/>
+		<property name="responseString"/>
+		<property name="status"/>
+		<property name="hasissue"/>
+		<property name="logtime"/>		
+		<property name="sms"/>		
+		<property name="circleId" column="circle_id"/>		
+		<property name="price"/>		
+		<property name="validity"/>
+		<property name="shortcode"/>	
+		<property name="keyword"/>			
+		<property name="circleName" column="circle_name"/>
+		<property name="operatorId" column="operator_id"/>
+		<property name="operatorName" column="operator_name"/>
+	</class>
+</hibernate-mapping>

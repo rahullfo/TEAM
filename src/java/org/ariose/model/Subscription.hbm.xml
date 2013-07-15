@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+    Document   : Subscription.hbm.xml
+    Created on : February 3, 2009, 11:55 AM
+    Author     : Sukhdeep
+    Description:
+        Purpose of the document is to map SubscriptionBean class with the subscription table in the DataBase.
+-->
+<hibernate-mapping>
+    <class name="org.ariose.model.SubscriptionBean" table="subscription">
+        
+        <id name="id" column="subscription_id" unsaved-value="0">
+            <generator class="native"/>
+        </id>
+        <property name="subscriberNo" column="subscriber_number" not-null="true"/>
+        <property name="subscriptionPackId" column="pack_id" not-null="false"/>
+        <property name="regionId" column="circle_id" not-null="false"/>
+        <property name="channelId" column="channel_id" not-null="false"/>
+        <property name="subscriptionCreationDate" column="subscription_creation_date" not-null="false"/>
+        <property name="subscriptionValidDate" column="subscription_valid_date" not-null="false"/>
+        <property name="subscriptionStatus" column="subscription_status" not-null="false"/>
+        <property name="subscriptionStatusMeaning" column="subscription_status_meaning" not-null="false"/>
+        <property name="nextchargingDate" column="nextcharging_date" not-null="false"/>
+        <property name="contentDeliveryDate" column="content_delivery_date" not-null="false"/>
+        <property name="operatorID" column="operator_id" not-null="false"/>
+        <property name="activationDate" column="activation_date" not-null="false"/>
+        <property name="email" column="email" not-null="false"/>
+        <property name="source" column="source" not-null="false"/>
+        <property name="unsubscribeDate" column="unsubscribe_date" not-null="false"/>
+        <property name="renewalCounter" column="renewal_counter" not-null="false"/>
+        <property name="deactivationSource" column="deactivation_source" not-null="false"/>
+        <property name="shortcode" column="shortcode" not-null="false"/>
+        <property name="keyword" column="keyword" not-null="false"/>
+        <property name="logtime" column="logtime" not-null="false"/>
+        <property name="operatorName" column="operator_name" not-null="false"/>
+        <property name="packName" column="pack_name" not-null="false"/>
+        <property name="circleName" column="circle_name" not-null="false"/>
+		<property name="lastRenewDate" column="last_renew_date" not-null="false"/>
+        <property name="smsSentStatus" column="prerenewal_sms_status"/>
+        <property name="handsetType" column="handset_type"/>
+        <property name="amount"/>
+        <property name="validity"/>
+        <property name="minutes"/>
+        <property name="renewalAmount" column="renewal_amount"/>
+	    </class>
+</hibernate-mapping>

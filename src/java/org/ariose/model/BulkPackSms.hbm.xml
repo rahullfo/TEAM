@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--  
+    Author     : Sushil
+-->
+
+<hibernate-mapping>
+    <class name="org.ariose.model.BulkPackSms" table="event_based_alerts" lazy="false">
+
+        <id name="id" column="id" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+        <property name="operatorId" column="operator_id" not-null="false"/>
+        <property name="packId" column="pack_id" not-null="false"/>
+        <property name="circleId" column="circle_id" not-null="false"/>
+        <property name="sendingMode" column="sending_mode" not-null="false"/>
+        <property name="startDateTime" column="startDateTime" not-null="false"/>
+        <property name="endDateTime" column="endDateTime" not-null="false"/>
+        <property name="message" column="message" not-null="false"/>
+        <property name="alertName" column="alert_name" not-null="false"/>
+        <property name="sendingStatus" column="sending_status" not-null="false"/>
+        <property name="userId" column="userId" not-null="false"/>
+        <property name="stopFlag" column="stop_flag" not-null="false"/>
+
+   </class>
+</hibernate-mapping>

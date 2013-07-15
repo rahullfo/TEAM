@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+    Document   : RelianceGatewayDetails.hbm.xml
+    Created on : February 18, 2009, 7:55 PM
+    Author     : Sukhdeep
+    Description:
+        Purpose of the document is to map RelianceGatewayDetailsBean class with the reliance_gateway_details table in the DataBase.
+-->
+<hibernate-mapping>
+    <class name="org.ariose.model.RelianceGatewayDetailsBean" table="reliance_gateway_details">
+
+        <id name="id" column="id" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+        <property name="ip" column="ip" not-null="false"/>
+        <property name="port" column="port" not-null="false"/>
+        <property name="url" column="url" not-null="false"/>
+        <property name="key" column="key_value" not-null="false"/>
+        <property name="operator" column="operator" not-null="true"/>
+        <property name="circleID" column="circle_id" not-null="false"/>
+        <property name="username" column="username" not-null="false"/>
+        <property name="password" column="pwd" not-null="false"/>
+        <property name="gatewayName" column="gateway_name" not-null="false"/>
+        <property name="gatewayId" column="gateway_id" not-null="false"/>
+    </class>
+</hibernate-mapping>

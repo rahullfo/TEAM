@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+    Document   : SubscriptionPack.hbm.xml
+    Created on : February 4, 2009, 11:55 AM
+    Author     : Sukhdeep
+    Description:
+        Purpose of the document is to map SubscriptionPackBean class with the subscription_pack table in the DataBase.
+-->
+<hibernate-mapping>
+    <class name="org.ariose.model.SubscriptionPackBean" table="pack">
+
+        <id name="subscriptionPackId" column="pack_id" unsaved-value="0">
+            <generator class="increment"/>
+        </id>      
+        <property name="planName" column="pack_name" not-null="true"/>
+        <property name="lastUpdateDate" column="last_update_date" not-null="true"/>
+        <property name="planStatus" column="pack_status" not-null="false"/>
+        <property name="packType" column="pack_type" not-null="false"/>
+        <property name="basePackName" column="base_pack_name" not-null="false"/>
+        <property name="basePackId" column="base_pack_id" not-null="false"/>        
+        <property name="userInfoUserId" column="user_info_user_id" not-null="false"/>
+        <property name="regionId" column="circle_id" not-null="false"/>
+        <property name="operatorId" column="operator_id" not-null="false"/>
+        <property name="tryandbuyPrice" column="tryandbuy_price" not-null="false"/>
+        <property name="tryandbuyValidity" column="tryandbuy_validity" not-null="false"/>
+        <property name="lowBalanceStatus" column="low_balance_status" not-null="false"/>
+        <property name="waitPeriod" column="wait_period" not-null="false"/>
+        <property name="maxRetries" column="max_retries" not-null="false"/>
+        <property name="packDesc" column="pack_desc" not-null="false"/>
+        <property name="packInfo" column="pack_info" not-null="false"/>
+        <property name="smsActivaion" column="sms_activaion" not-null="false"/>
+        <property name="smsDeactivaion" column="sms_deactivation" not-null="false"/>
+        <property name="isADMassage" column="is_ad_massage" not-null="false"/>
+        <property name="smsExpiry" column="sms_expiry" not-null="false"/>
+        <property name="isExpiryMessage" column="is_ex_message" not-null="false"/>
+        <property name="numberBeforeExpiryMessage" column="nos_before_expiry_message" not-null="false"/>
+        <property name="smsGrace" column="sms_grace" not-null="false"/>
+        <property name="isAutoRenewal" column="is_autorenewal" not-null="false"/>
+        <property name="adminSenderId" column="admin_sender_id" not-null="false"/>
+        <property name="contentSenderId" column="content_sender_id" not-null="false"/>
+        <property name="isGolive" column="golive" not-null="false"/>
+        <property name="lowBalanceDays" column="low_balance_days" not-null="false"/>
+        <property name="preRenewalDays" column="pre_renewal_days" not-null="false"/>
+        <property name="gatewayName" column="gateway_name" not-null="false"/>
+        <property name="gatewayId" column="gateway_id" not-null="false"/>
+        <property name="smsFreshLowBalance" column="sms_fresh_lowbalance" not-null="false"/>
+        <property name="freshLowBalance" column="fresh_lowbalance" not-null="false"/>
+        <property name="smsRenewalLowBalance" column="sms_renewal_lowbalance" not-null="false"/>
+        <property name="renewalLowBalance" column="renewal_lowbalance" not-null="false"/>
+        <property name="pricing" column="pricing" not-null="false"/>
+         <property name="footerMessage" column="footer_message" not-null="false"/>
+        <property name="sentFooter" column="sent_footer" not-null="false"/>
+        <property name="aliasNames" column="alias_names" not-null="false"/>
+        <property name="actUssdString" column="act_ussd_string" not-null="false"/>
+        <property name="dctUssdString" column="dct_ussd_string" not-null="false"/>
+         <property name="startDate" column="start_date" not-null="false"/>
+        <property name="endDate" column="end_date" not-null="false"/>
+    </class>
+</hibernate-mapping>

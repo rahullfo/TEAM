@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="org.ariose.model.ContentScheduler" table="content_scheduler">
+         <id name="id" column="id" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+        <property name="packId" column="pack_id" not-null="true"/>
+        <property name="contentId" column="content_id" not-null="true"/>
+        <property name="priority"  column="priority"  not-null="true"/>
+        <property name="day"  column="day"  not-null="true"/>
+        <property name="time"  column="time" not-null="true"/>
+
+
+        <property name="operatorName" column="operator_name" not-null="false"/>
+        <property name="operatorId" column="operator_id" not-null="false"/>
+        <property name="circleName" column="circle_name" not-null="false"/>
+        <property name="circleId" column="circle_id" not-null="false"/>
+        <property name="packName" column="pack_name" not-null="false"/>
+        <property name="isSend" column="isSend" not-null="false"/>
+        <property name="index"  column="cms_row_index" not-null="false"/>
+        <property name="circlespecific"/>
+<!--  
+        <property name="minutes"/>
+-->
+    </class>
+</hibernate-mapping>

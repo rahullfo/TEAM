@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="org.ariose.model.Content" table="content">
+
+        <id name="content_id" column="content_id" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+        <property name="content_owner_id" column="content_owner_id" not-null="true"/>
+        <property name="content_owner_name" column="content_owner_name" not-null="true"/>
+        <property name="content_name" column="content_name" not-null="true"/>
+        <property name="content_description" column="content_description" not-null="false"/>
+        
+        <!--
+        <property name="content_creation_date" column="content_creation_date" not-null="false"/>
+        -->
+        
+        <property name="content_category" column="content_category" not-null="false"/>
+        <property name="content_url" column="content_url" not-null="false"/>
+        <property name="content_user_name" column="content_user_name" not-null="false"/>
+        <property name="content_password" column="content_password" not-null="false"/>
+        <property name="content_check_time" column="content_check_time" not-null="false"/>
+        <property name="content_alert_mob" column="content_alert_mob" not-null="false"/>
+        <property name="content_alert_email" column="content_alert_email" not-null="false"/>
+        
+        <!--
+        <property name="content_expiry_time" column="content_expiry_time" not-null="false"/>
+        -->
+        
+        <property name="dm_id" column="dm_id" not-null="false"/>
+        <property name="dm_name" column="dm_name" not-null="false"/>
+        <property name="language" column="language" not-null="false"/>
+   </class>
+</hibernate-mapping>
+
+  

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="org.ariose.model.ContentDeliveryRealTimeDashboard" table="content_delivery_dashboard_data">
+         <id name="id" column="id" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+        <property name="operatorId" column="operator_id" not-null="true"/>
+        <property name="operatorName" column="operator_name" not-null="true"/>
+        <property name="circleId"  column="circle_id"  not-null="true"/>
+        <property name="circleName"  column="circle_name"  not-null="true"/>
+        <property name="serviceId"  column="service_id" not-null="true"/>
+        <property name="serviceName" column="service_name" not-null="true"/>
+        <property name="scheduleTime" column="schedule_time" not-null="true"/>
+        <property name="cmsId"  column="cms_id"/>
+        <property name="updateTime"  column="update_time"/>
+        <property name="delivered"  column="delivered"/>
+        <property name="noofsubscribers" column="noofsubscribers"/>
+        <property name="retry" column="retry"/>
+        <property name="firstPush"  column="first_push"/>
+        <property name="lastPush"  column="last_push"/>
+        <property name="remarks"  column="remarks"/>
+        <property name="startFlag" column="start_flag"/>
+        <property name="pushed" column="pushed"/>
+        <property name="logtime" column="logtime"/>
+        <property name="contentSchedulerId" column="content_scheduler_id"/>
+        <property name="contentId" column="content_id"/>
+        
+    </class>
+</hibernate-mapping>

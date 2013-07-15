@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<!--
+    Document   : Twitter.hbm.xml
+    Created on : November 3, 2010, 2:13 PM
+    Author     : shweta
+    Description:
+        Purpose of the document follows.
+-->
+
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>  <!-- // whats its use-->
+
+<class name="org.ariose.model.CirclePackRevenue" table="circle_pack_revenue">
+
+ <id name="id" column="id" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+
+		<property name="circleName" column="circlename" not-null="false"/>
+		<property name="service" column="service" not-null="false"/>
+		<property name="subType" column="sub_type" not-null="false"/>
+		<property name="priceChanged" column="price_changed" not-null="false"/>
+                <property name="hitDate" column="hit_date" not-null="false"/>
+		<property name="source" column="source" not-null="false"/>
+		<property name="platform" column="platform" not-null="false"/>
+		<property name="subscriberNumber" column="subscriber_number" not-null="false"/>
+                <property name="packID" column="pack_id" not-null="false"/>
+		<property name="subscriptionStatus" column="subscription_status" not-null="false"/>
+		<property name="packName" column="pack_name" not-null="false"/>
+
+
+
+                 </class>
+
+
+</hibernate-mapping>

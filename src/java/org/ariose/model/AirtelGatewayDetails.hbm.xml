@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+    Document   : AirtelGatewayDetails.hbm.xml
+    Created on : February 19, 2009, 1:57 PM
+    Author     : Sukhdeep
+    Description:
+        Purpose of the document is to map AirtelGatewayDetailsBean class with the airtel_gateway_details table in the DataBase.
+-->
+<hibernate-mapping>
+    <class name="org.ariose.model.AirtelGatewayDetailsBean" table="airtel_gateway_details">
+
+        <id name="id" column="id" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+        <property name="ip" column="ip" not-null="false"/>
+        <property name="port" column="port" not-null="false"/>
+        <property name="url" column="url" not-null="false"/>
+        <property name="key" column="key_value" not-null="false"/>
+        <property name="operator" column="operator" not-null="true"/>
+        <property name="pwd" column="pwd" not-null="false"/>
+        <property name="contentType" column="content_type" not-null="false"/>
+        <property name="contentID" column="content_id" not-null="false"/>
+        <property name="contentDesc" column="content_desc" not-null="false"/>
+        <property name="cmmcontentID" column="cmmcontent_id" not-null="true"/>
+        <property name="copyrightID" column="copyright_id" not-null="false"/>
+        <property name="smskeyword" column="smskeyword" not-null="false"/>
+        <property name="billingtype" column="billingtype" not-null="false"/>
+        <property name="eup" column="eup" not-null="false"/>
+        <property name="subsflag" column="subsflag" not-null="true"/>
+        <property name="circleID" column="circle_id" not-null="false"/>
+        <property name="gatewayName" column="gateway_name" not-null="false"/>
+        <property name="gatewayId" column="gateway_id" not-null="false"/>
+        <property name="username" column="username" not-null="false"/>
+    </class>
+</hibernate-mapping>

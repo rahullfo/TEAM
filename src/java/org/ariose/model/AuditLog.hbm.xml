@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!--
+		Document : AuditLog.hbm.xml Created on : april 22, 2009 Author : manu
+		Description: maps AuditLog class
+	-->
+<hibernate-mapping>
+	<class name="org.ariose.model.AuditLogBean" table="audit_log">
+
+		<id name="id" column="id" unsaved-value="0">
+			<generator class="increment" />
+		</id>
+		<property name="loginId" column="login_id" not-null="false" />
+		<property name="moduleId" column="module_id" not-null="false" />
+		<property name="moduleName" column="module_name" not-null="false" />
+		<property name="eventDescription" column="event_description" not-null="false" />
+        <property name="timeStamp" column="time" not-null="false" />
+	</class>
+</hibernate-mapping>

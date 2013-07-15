@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+    Document   : Event.hbm.xml
+    Created on : February 2, 2009, 11:55 AM
+    Author     : Sukhdeep
+    Description:
+        Purpose of the document is to map Event Class with the event table in the DataBase.
+-->
+<hibernate-mapping>
+    <class name="org.ariose.model.Event" table="event">
+		<!-- TODO: mapping is to be changed -->
+        <id name="user_id" column="user_id" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+        <property name="region_id" column="circle_id" not-null="true"/>
+        <property name="user_name" column="user_name" not-null="true"/>
+        <property name="description" column="description" not-null="false"/>
+        <property name="user_password" column="user_password" not-null="true"/>
+        <property name="creation_date" column="creation_date" not-null="true"/>
+        <property name="user_status" column="user_status" not-null="true"/>
+        <property name="user_role" column="user_role" not-null="true"/>
+        <property name="user_email" column="user_email" not-null="false"/>
+        <property name="user_phone_number" column="user_phone_number" not-null="false"/>
+        <property name="user_login_status" column="user_login_status" not-null="true"/>
+        <property name="user_last_login" column="user_last_login" not-null="false"/>
+        <property name="login_id" column="login_id" not-null="false"/>
+
+
+    </class>
+</hibernate-mapping>

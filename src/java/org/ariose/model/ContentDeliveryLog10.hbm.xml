@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+    Document   : ContentDeliveryLog10.hbm.xml
+    Created on : April 28, 2009
+    Author     : Manu
+    Description:
+        
+-->
+<hibernate-mapping>
+    <class name="org.ariose.model.ContentDeliveryLog10" table="content_delivery_log10">
+        <id name="id" column="id" unsaved-value="0">
+            <generator class="native"/>
+        </id>
+        <property name="operatorName" column="operator_name" not-null="false"/>
+        <property name="operatorId" column="operator_id" not-null="false"/>
+        <property name="circleName" column="circle_name" not-null="false"/>
+        <property name="circleId" column="circle_id" not-null="false"/>
+        <property name="packName" column="pack_name" not-null="false"/>
+        <property name="packId" column="pack_id" not-null="false"/>
+        <property name="subscriberNumber" column="subscriber_number" not-null="false"/>
+        <property name="content" column="content" not-null="false"/>
+        <property name="sentDate" column="sent_date" not-null="false"/>
+        <property name="deliveryStatus" column="delivery_status" not-null="false"/>
+        <property name="contentSchedulerId" column="content_scheduler_id" not-null="false"/>
+        <property name="request"/>
+        <property name="response"/>
+        <property name="status"/>
+        <property name="logTime" column="logtime"/>
+        <property name="shortcode"/>
+        <property name="keyword"/>
+    </class>
+</hibernate-mapping>

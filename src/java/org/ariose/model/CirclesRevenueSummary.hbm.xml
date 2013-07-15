@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+    Document   : CirclesRevenueSummary.hbm.xml
+    Created on : June 29, 2010, 12:45 PM
+    Author     : Sushil
+    Description:
+        Purpose of the document is to map CirclesRevenueSummary class with the circles_revenue_summary in the DataBase.
+-->
+
+<hibernate-mapping>
+    <class name="org.ariose.model.CirclesRevenueSummary" table="circles_revenue_summary">
+        <id name="id" column="id" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+        <property name="operatorId" column="operator_id" not-null="false"/>
+        <property name="circleId" column="circle_id" not-null="false"/>
+        <property name="revenue" column="revenue" not-null="false"/>
+        <property name="circleName" column="circle_name" not-null="false"/>        
+    </class>
+</hibernate-mapping>

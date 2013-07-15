@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+    Document   : SubsRequestLog12.hbm.xml
+    Created on : April 29, 2009
+    Author     : Manu
+    Description:
+        
+-->
+<hibernate-mapping>
+    <class name="org.ariose.model.SubsRequestLog12" table="subs_request_log12">
+        <id name="id" column="id" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+        <property name="operatorName" column="operator_name" not-null="false"/>
+        <property name="operatorId" column="operator_id" not-null="false"/>
+        <property name="circleName" column="circle_name" not-null="false"/>
+        <property name="circleId" column="circle_id" not-null="false"/>
+        <property name="packName" column="pack_name" not-null="false"/>
+        <property name="packId" column="pack_id" not-null="false"/>
+        <property name="subscriberNumber" column="subscriber_number" not-null="false"/>
+        <property name="keyword" column="keyword" not-null="false"/>
+        <property name="channelId" column="channel_id" not-null="false"/>
+        <property name="requestTime" column="request_time" not-null="false"/>        
+        <property name="subscriptionStatus" column="subscription_status" not-null="false"/>
+        <property name="shortcode" column="shortcode" not-null="false"/>
+        <property name="request"/>
+        <property name="logTime" column="logtime" not-null="false"/>
+        <property name="response"/>
+        
+    </class>
+</hibernate-mapping>

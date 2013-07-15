@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!--
+		Document : IdeaSubscriptionExtraParam.hbm.xml Created on : Jan 2011
+		Author : Manu Parmar Description:
+	-->
+<hibernate-mapping>
+	<class name="org.ariose.model.IdeaSubscriptionExtraParam" table="idea_subscription_extra_param">
+		<id name="subscription_id" column="subscription_id" unsaved-value="0" />
+		<property name="shortcode" />
+		<property name="ussdstring" />
+	</class>
+</hibernate-mapping>

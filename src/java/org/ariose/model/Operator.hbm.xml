@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+    Document   : Operator.hbm.xml
+    Created on : February 25, 2009, 8:54 PM
+    Author     : Sukhdeep
+    Description:
+        Purpose of the document is to map OperatorBean class with the operator in the DataBase.
+-->
+
+<hibernate-mapping>
+    <class name="org.ariose.model.OperatorBean" table="operator">
+
+        <id name="id" column="operator_id" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+        <property name="operatorName" column="operator_name" not-null="false"/>
+        <property name="operatorDescription" column="operator_description" not-null="false"/>
+        <property name="operatorLogo" column="operator_logo" not-null="false"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+    Document   : ReportData.hbm.xml
+    Created on : March 3, 2009, 3:24 PM
+    Author     : Sukhdeep
+    Description:
+        Purpose of the document follows.
+-->
+
+<hibernate-mapping>
+    <class name="org.ariose.model.ReportDataBean" table="reportdata">
+        <id name="id" column="id" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+        <property name="operatorID" column="operator_id" not-null="true"/>
+        <property name="circleID" column="circle_id" not-null="false"/>
+        <property name="circleName" column="circle_description" not-null="true"/>
+        <property name="packID" column="pack_id" not-null="true"/>
+        <property name="packName" column="pack_name" not-null="true"/>
+        <property name="mobileNo" column="subscriber_number" not-null="false"/>
+        <property name="subscriberStatus" column="subscription_status" not-null="true"/>
+
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="org.ariose.model.DocomoPrerenewalInfo" table="docomo_prerenewal_info">
+
+		<id name="id" column="id" unsaved-value="0">
+			<generator class="increment" />
+		</id>
+        <property name="subscriberNumber" column="subscriber_number" not-null="false"/>
+        <property name="packId" column="pack_id" not-null="false"/>
+        <property name="packName" column="pack_name" not-null="false"/>
+        <property name="subscriptionId" column="subscription_id" not-null="false"/>
+        <property name="validDate" column="valid_date" not-null="false"/>
+        <property name="status" column="status" not-null="false"/>
+        <property name="statusMeaning" column="status_meaning" not-null="false"/>
+        <property name="logtime" column="logtime" not-null="false"/>
+        <property name="updateTime" column="update_time" not-null="false"/>
+        <property name="smsSendingTime" column="sms_sending_time" not-null="false"/>
+	</class>
+</hibernate-mapping>

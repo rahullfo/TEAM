@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!--
+		Document : UninorRevenue.hbm.xml Created on : September 16, 2011
+		Author : Manu Parmar Description:
+	-->
+<hibernate-mapping>
+	<class name="org.ariose.model.UninorRevenueBean" table="uninor_revenue">
+
+		<id name="id" column="id" unsaved-value="0">
+			<generator class="increment" />
+		</id>
+		<property name="subscriptionId" column="subscription_id" />
+		<property name="notifyType" column="notify_type" />
+		<property name="SID" column="sid" />
+		<property name="productName" column="product_name" />
+		<property name="serviceName" column="service_name" />
+		<property name="expiryDate" column="expiry_date" />
+		<property name="amountCharged" column="amount_charged" />
+		<property name="subID" column="sub_id" />
+		<property name="subscriptionValidity" column="subscription_validity" />
+		<property name="channelType" column="channel_type" />
+		<property name="circleId" column="circle_id" />
+		<property name="circleName" column="circle_name" />
+		<property name="logtime"/>
+	</class>
+</hibernate-mapping>

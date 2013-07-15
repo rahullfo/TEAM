@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+    Document   : OnHold.hbm.xml
+    Created on : February 6, 2009, 11:55 AM
+    Author     : Sukhdeep
+    Description:
+        Purpose of the document is to map OnHoldBean class with the onholdsubscription table in the DataBase.
+-->
+
+
+
+<hibernate-mapping>
+    <class name="org.ariose.model.OnHoldBean" table="onholdsubscription">
+
+        <id name="id" column="id" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+        <property name="mobileNo" column="mobile_no" not-null="true"/>
+        <property name="packId" column="pack_id" not-null="false"/>
+        <property name="channelId" column="channel_id" not-null="false"/>
+        <property name="action" column="action" not-null="false"/>
+        <property name="operatorId" column="operator_id" not-null="false"/>
+        <property name="circleId" column="circle_id" not-null="false"/>
+        <property name="handsetType" column="handset_type" not-null="false"/>
+        
+    </class>
+</hibernate-mapping>

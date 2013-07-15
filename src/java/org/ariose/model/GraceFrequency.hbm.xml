@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+    Document   : graceFrequency.hbm.xml
+    Created on : February 17, 2009, 1:00 PM
+    Author     : Sukhdeep
+    Description:
+        Purpose of the document is to map graceFrequencyBean class with the grace_frequency table in the DataBase.
+-->
+
+<hibernate-mapping>
+    <class name="org.ariose.model.GraceFrequencyBean" table="grace_frequency">
+
+        <id name="id" column="id" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+        <property name="packID" column="pack_id" not-null="true"/>
+        <property name="chargingDay" column="charging_day" not-null="false"/>
+        <property name="contentDay" column="content_day" not-null="true"/>
+    </class>
+</hibernate-mapping>

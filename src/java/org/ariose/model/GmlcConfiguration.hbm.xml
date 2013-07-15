@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!--
+		Document : GmlcConfiguration.hbm.xml 
+		Created on : feb 2010 
+		Author : manu
+		Description: 
+	-->
+<hibernate-mapping>
+	<class name="org.ariose.model.GmlcConfiguration" table="gmlc_configuration">
+
+		<id name="id" column="id" unsaved-value="0">
+			<generator class="increment" />
+		</id>
+		<property name="operatorname"/>
+		<property name="shortcode"/>
+		<property name="locationsvcurl"/>
+		<property name="locationsvcuserid"/>
+		<property name="locationsvcpwd"/>
+		<property name="ipaddress"/>
+		<property name="port"/>
+		<property name="systemid"/>
+		<property name="password"/>
+		<property name="bindmode"/>
+		<property name="addrton"/>
+		<property name="addrnpi"/>
+		<property name="addressrange"/>
+		<property name="sourceton"/>
+		<property name="sourcenpi"/>
+		<property name="sourceaddress"/>
+		<property name="destinationton"/>
+		<property name="destinationnpi"/>
+		<property name="destinationaddress"/>
+		<property name="servicetype"/>
+		<property name="systemtype"/>
+		<property name="receivetimeout"/>
+		
+		
+		<property name="smsrhostname"/>
+		<property name="smsrport"/>
+		<property name="smsrsystemid"/>
+		<property name="smsrpassword"/>
+		<property name="smsrsystemtype"/>
+		<property name="smsrsourceton"/>
+		<property name="smsrsourcenpi"/>
+		<property name="smsrsourceaddress"/>
+
+		<property name="smsreceiverurl"/>
+	</class>
+</hibernate-mapping>

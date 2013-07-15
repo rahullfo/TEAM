@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="org.ariose.model.ReportSchedule" table="report_schedule">
+
+		<id name="reportId" column="reportid" unsaved-value="0">
+			<generator class="increment" />
+		</id>
+		<property name="reportName" column="reportname" not-null="true" />
+		<property name="query" column="query" not-null="true" />
+		<property name="startTime" column="start_time" not-null="true" />
+		<property name="endTime" column="end_time" not-null="true" />
+                <property name="interval" column="timeinterval" not-null="true" />
+                <property name="smsString" column="message_string" not-null="true" />
+	</class>
+</hibernate-mapping>

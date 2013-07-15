@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+    Document   : ChargingGatewayParmater.hbm.xml
+    Created on : April 23, 2009
+    Author     : Manup
+    Description:
+
+-->
+<hibernate-mapping>
+    <class name="org.ariose.model.ChargingGatewayParameter" table="charging_gateway_parameter">
+        <id name="id" column="id" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+        <property name="gatewayId" column="gateway_id" not-null="true"/>
+        <property name="gatewayName" column="gateway_name" not-null="true"/>
+        <property name="key" column="keystr" not-null="true"/>
+        <property name="value" column="valuestr" not-null="false"/>
+    </class>
+</hibernate-mapping>

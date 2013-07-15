@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+    Document   : Configuration.hbm.xml
+    Created on : March 5, 2009, 3:45 PM
+    Author     : Sukhdeep
+    Description:
+        Purpose of the document is to map ConfigurationBean class with the configuration in the DataBase.
+-->
+
+<hibernate-mapping>
+    <class name="org.ariose.model.ConfigurationBean" table="configuration">
+
+        <id name="id" column="id" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+        <property name="cfgLogLevel" column="cfg_log_level" not-null="false"/>
+        <property name="cfgLogSize" column="cfg_log_size" not-null="false"/>
+        <property name="cfgLogFileName" column="cfg_log_file_name" not-null="false"/>
+        <property name="cfgEmailUserName" column="cfg_email_user_name" not-null="false"/>
+        <property name="cfgEmailPassword" column="cfg_email_password" not-null="false"/>
+        <property name="cfgEmailPopServer" column="cfg_email_pop_server" not-null="false"/>
+        <property name="cfgEmailSmtpServer" column="cfg_email_smtp_server" not-null="false"/>
+        <property name="cfgEmailPopPort" column="cfg_email_pop_port" not-null="false"/>
+        <property name="cfgEmailSmtpPort" column="cfg_email_smtp_port" not-null="false"/>
+        <property name="cfgSmscUrl" column="cfg_smsc_url" not-null="false"/>
+        <property name="cfgSmscUserName" column="cfg_smsc_user_name" not-null="false"/>
+        <property name="cfgSmscPassword" column="cfg_smsc_password" not-null="false"/>
+        <property name="onHold" column="on_hold" not-null="false"/>
+        <property name="operatorId" column="operator_id" not-null="false"/>
+        <property name="currency" column="currency" not-null="true"/>
+   </class>
+</hibernate-mapping>

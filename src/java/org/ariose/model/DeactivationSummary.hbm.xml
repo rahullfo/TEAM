@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+    Document   : GraceActive.hbm.xml
+    Created on : March 10, 2009, 6:18 PM
+    Author     : Sukhdeep
+    Description:
+        Purpose of the document is to map GraceActive class with the grace_active table in the DataBase.
+-->
+
+<hibernate-mapping>
+    <class name="org.ariose.model.DeactivationSummary" table="deactivation_summary">
+
+        <id name="id" column="id" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+        <property name="totalDeactivations" column="total_deactivations" not-null="false"/>
+        <property name="voluntaryChurn" column="voluntary_churn" not-null="false"/>
+        <property name="lowBalanceChurn" column="low_balance_churn" not-null="false"/>
+        <property name="currentDate" column="today_date" not-null="false"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!--
+		Document : CampaignSchedulerData.hbm.xml 
+	-->
+<hibernate-mapping>
+	<class name="org.ariose.model.CampaignSchedulerData" table="campaign_scheduler_data">
+		<id name="id" column="id" unsaved-value="0">
+			<generator class="increment" />
+		</id>
+		<property name="campaignName" column="campaign_name" not-null="true" />
+		<property name="campaignMode" column="campaign_mode" not-null="true" />
+		<property name="startDate" column="start_date" not-null="true" />
+		<property name="endDate" column="end_date" not-null="true" />
+		<property name="messageStr" column="message_str" not-null="false" />
+		<property name="fileName" column="filename" not-null="false" />
+                <property name="status" column="sending_status" not-null="false" />
+                <property name="userId" column="user_id" not-null="false" />
+                <property name="stopFlag" column="stop_flag" not-null="false" />
+
+	</class>
+</hibernate-mapping>

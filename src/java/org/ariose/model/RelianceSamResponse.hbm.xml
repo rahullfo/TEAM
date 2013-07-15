@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="org.ariose.model.RelianceSamResponse" table="reliance_sam_response">
+		<id name="id" column="id" unsaved-value="0">
+			<generator class="increment" />
+		</id>
+		<property name="subscriber_number" />
+		<property name="subscriber_type" />
+		<property name="request_from" />
+		<property name="circle_id" />
+		<property name="circle_name" />
+		<property name="pack_id" />
+		<property name="pack_name" />
+		<property name="response_code" />
+		<property name="validity" />
+		<property name="startdate" />
+		<property name="enddate" />
+		<property name="logtime" />
+	</class>
+</hibernate-mapping>

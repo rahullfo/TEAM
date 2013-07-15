@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+    Document   : Type.hbm.xml
+    Created on : February 28, 2009, 1:04 PM
+    Author     : Sukhdeep
+    Description:
+        Purpose of the document is to map TypeBean class with the type in the DataBase.
+-->
+
+<hibernate-mapping>
+    <class name="org.ariose.model.TypeBean" table="type">
+
+        <id name="id" column="id" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+        <property name="type" column="type" not-null="true"/>
+    </class>
+</hibernate-mapping>

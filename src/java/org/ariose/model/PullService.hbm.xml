@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="org.ariose.model.PullService" table="pull_service">
+         <id name="id" column="id" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+        <property name="esme_name"/>
+        <property name="short_code"/>
+        <property name="operator_id"/>
+        <property name="operator_name"/>
+        <property name="esme_name"/>
+        <property name="application_url"/>
+        <property name="request_link"/>        
+   </class>
+</hibernate-mapping>

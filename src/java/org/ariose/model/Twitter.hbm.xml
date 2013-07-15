@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<!--
+    Document   : Twitter.hbm.xml
+    Created on : November 3, 2010, 2:13 PM
+    Author     : shweta
+    Description:
+        Purpose of the document follows.
+-->
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>  <!-- // whats its use-->
+
+<class name="org.ariose.model.Twitter1" table="twitter_details">
+
+ <id name="id" column="id" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+
+		<property name="date" column="date" not-null="false"/>
+		<property name="flag" column="flag" not-null="false"/>
+		<property name="message" column="message" not-null="false"/>
+		<property name="senddate" column="senddate" not-null="false"/>
+                 </class>
+
+
+</hibernate-mapping>

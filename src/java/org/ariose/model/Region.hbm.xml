@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="org.ariose.model.Region" table="region">
+
+        <id name="region_id" column="circle_id" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+        <property name="region_name" column="circle_name" not-null="true"/>
+        <property name="operator_id" column="operator_id" not-null="true"/>
+   </class>
+</hibernate-mapping>

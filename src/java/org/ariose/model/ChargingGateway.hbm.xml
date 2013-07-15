@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!--
+		Document : ChargingGateway.hbm.xml Created on : April 23, 2009 Author
+		: Manup Description:
+	-->
+<hibernate-mapping>
+	<class name="org.ariose.model.ChargingGateway" table="charging_gateway">
+		<id name="id" column="id" unsaved-value="0">
+			<generator class="increment" />
+		</id>
+		<property name="operatorId" column="operator_id" not-null="true" />
+		<property name="circleId" column="circle_id" not-null="true" />
+		<property name="gatewayId" column="gateway_id" not-null="true" />
+		<property name="gatewayName" column="gateway_name" not-null="true" />
+		<property name="ip" column="ip" not-null="false" />
+		<property name="port" column="port" not-null="false" />
+		<property name="url" column="url" not-null="false" />
+		<property name="user" column="username" not-null="false" />
+		<property name="pwd" column="pwd" not-null="false" />
+	</class>
+</hibernate-mapping>

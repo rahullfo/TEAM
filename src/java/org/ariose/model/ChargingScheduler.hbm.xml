@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+    Document   : ChargingScheduler.hbm.xml
+    Created on : March 13, 2009, 1:30 PM
+    Author     : Sukhdeep
+    Description:
+        Purpose of the document follows.
+-->
+<hibernate-mapping>
+    <class name="org.ariose.model.ChargingSchedulerBean" table="charging_scheduler">
+         <id name="id" column="id" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+        <property name="operatorId" column="operator_id" not-null="true"/>
+        <property name="circleId" column="circle_id" not-null="true"/>
+        <property name="priority" column="priority" not-null="true"/>
+        <property name="sunday" column="sun" not-null="false"/>
+        <property name="monday" column="mon" not-null="false"/>
+        <property name="tuesday" column="tue" not-null="false"/>
+        <property name="wednesday" column="wed" not-null="false"/>
+        <property name="thursday" column="thu" not-null="false"/>
+        <property name="friday" column="fri" not-null="false"/>
+        <property name="saturday" column="sat" not-null="false"/>
+        <property name="isDFWeeklyDaily" column="is_df_wd" not-null="false"/>
+
+   </class>
+</hibernate-mapping>

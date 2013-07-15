@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="org.ariose.model.DeliveryMechanism" table="delivery_mechanism">
+
+        <id name="dm_id" column="dm_id" unsaved-value="0">
+            <generator class="increment"/>
+        </id>    
+        <property name="dm_name" column="dm_name" not-null="true"/>    
+        
+   </class>
+</hibernate-mapping>

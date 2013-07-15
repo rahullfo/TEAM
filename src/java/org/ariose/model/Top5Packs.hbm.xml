@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+    Document   : PacksRevenueSummary.hbm.xml
+    Created on : February 27, 2009, 2:45 PM
+    Author     : Sukhdeep
+    Description:
+        Purpose of the document is to map PacksRevenueSummary class with the packs_revenue_summary in the DataBase.
+-->
+
+<hibernate-mapping>
+    <class name="org.ariose.model.Top5Packs" table="top_packs">
+        <id name="id" column="id" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+        <property name="operatorId" column="operator_id" not-null="false"/>
+        <property name="packId" column="pack_id" not-null="false"/>
+        <property name="counts" column="counts" not-null="false"/>
+        <property name="packName" column="pack_name" not-null="false"/>
+    </class>
+</hibernate-mapping>

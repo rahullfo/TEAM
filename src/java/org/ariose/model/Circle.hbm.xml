@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+    Document   : Circle.hbm.xml
+    Created on : February 27, 2009, 2:45 PM
+    Author     : Sukhdeep
+    Description:
+        Purpose of the document is to map CircleBean class with the circle in the DataBase.
+-->
+
+<hibernate-mapping>
+    <class name="org.ariose.model.CircleBean" table="circle">
+
+        <id name="id" column="circle_id" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+        <property name="circleName" column="circle_name" not-null="true"/>
+        <property name="circleDescription" column="circle_description" not-null="false"/>
+        <property name="ideaSiteId" column="idea_site_id" not-null="false"/>
+   </class>
+</hibernate-mapping>

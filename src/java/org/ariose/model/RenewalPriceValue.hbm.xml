@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+    Document   : RenewalPriceValue.xml
+    Created on : February 23, 2009, 2:13 PM
+    Author     : Sukhdeep
+    Modified By: Manu Parmar - Sep 2011 - For Docomo
+    Description:
+        Purpose of the document is to map PriceValueBean class with the charging_renewal view in the DataBase.
+-->
+
+<hibernate-mapping>
+    <class name="org.ariose.model.RenewalPriceValueBean" table="charging_renewal">
+
+        <id name="id" column="id" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+        <property name="packID" column="pack_id" not-null="false"/>
+        <property name="price" column="price" not-null="false"/>
+        <property name="validity" column="validity" not-null="false"/>
+        <property name="minutes"/>
+    </class>
+</hibernate-mapping>

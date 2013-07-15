@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+    Document   : Transaction.hbm.xml
+    Created on : February 5, 2009, 11:55 AM
+    Author     : Sukhdeep
+    Description:
+        Purpose of the document is to map TransactionBean class with the transaction table in the DataBase.
+-->
+<hibernate-mapping>
+    <class name="org.ariose.model.TransactionBean2" table="ch_transaction2">
+        <id name="id" column="id" unsaved-value="0">
+            <generator class="native"/>
+        </id>
+        <property name="circleName" column="circle_name" not-null="false"/>
+        <property name="circleId" column="circle_id" not-null="false"/>
+        <property name="packName" column="pack_name" not-null="false"/>
+        <property name="packId" column="pack_id" not-null="false"/>
+        <property name="subscriberNumber" column="subscriber_number" not-null="false"/>
+        <property name="activationDate" column="subscription_activation_date" not-null="false"/>
+        <property name="priceCharged" column="price_charged" not-null="false"/>
+        <property name="chargingDate" column="charging_date" not-null="false"/>
+        <property name="subscriptionStatus" column="subscription_status" not-null="false"/>
+        <property name="chargingStatus" column="charging_status" not-null="false"/>
+        <property name="reason" column="reason" not-null="false"/>
+        <property name="operatorName" column="operator_name" not-null="false"/>
+        <property name="operatorId" column="operator_id" not-null="false"/>
+        <property name="smsString" column="sms_string" not-null="false"/>
+        <property name="request"/>
+        <property name="response"/>
+        <property name="status"/>
+        <property name="logTime" column="logtime" not-null="false"/>
+        <property name="source" column="source" not-null="false"/>
+        <property name="renewDate" column="renew_date" not-null="false"/>
+    </class>
+</hibernate-mapping>

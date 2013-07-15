@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+    Document   : OperatorCircleRelationship.hbm.xml
+    Created on : March 2, 2009, 4:55 PM
+    Author     : Sukhdeep
+    Description:
+        Purpose of the document is to map OperatorCircleRelationship class with the operator_circle_relationship in the DataBase.
+-->
+
+<hibernate-mapping>
+    <class name="org.ariose.model.OperatorCircleRelationshipBean" table="operator_circle_relationship">
+
+        <id name="id" column="id" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+        <property name="operatorId" column="operator_id" not-null="true"/>
+        <property name="circleId" column="circle_id" not-null="true"/>
+        <property name="circleName" column="circle_name" not-null="true"/>
+        <property name="operatorName" column="operator_name" not-null="true"/>
+    </class>
+</hibernate-mapping>

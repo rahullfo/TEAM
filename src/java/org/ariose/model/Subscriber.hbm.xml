@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+    Document   : Subscriber.hbm.xml
+    Created on : February 2, 2009, 11:55 AM
+    Author     : Sukhdeep
+    Description:
+        Purpose of the document is to map SubscriberBean class with the subscriber table in the DataBase.
+-->
+<hibernate-mapping>
+    <class name="org.ariose.model.SubscriberBean" table="subscriber">
+
+        <id name="id" column="subscriber_id" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+   <!--     <list name="subscription" cascade="all">
+            <key column="parent_id"/>
+            <index column="subscriber_id"/>
+            <one-to-many class="subscription"/>
+        </list>
+    -->
+        <property name="regionId" column="circle_id" not-null="true"/>
+        <property name="operatorTableOperatorId" column="operator_id" not-null="true"/>
+        <property name="subscriberNo" column="subscriber_number" not-null="true"/>
+        <property name="handsetType" column="handset_type" not-null="false"/>
+
+    </class>
+</hibernate-mapping>

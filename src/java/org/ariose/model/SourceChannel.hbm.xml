@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!--
+		Document : SourceChannel.hbm.xml 
+		Created on : Jan 2011 
+		Author : Manu Parmar 
+		Description: Purpose of the document is to map SourceChannelBean class with the source_channel table in the DataBase.
+	-->
+<hibernate-mapping>
+	<class name="org.ariose.model.SourceChannelBean" table="source_channel">
+		<id name="id" column="id" unsaved-value="0">
+			<generator class="increment" />
+		</id>
+		<property name="source" />
+	</class>
+</hibernate-mapping>

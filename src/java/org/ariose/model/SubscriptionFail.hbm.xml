@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+    Document   : SubscriptionFail.hbm.xml
+    Created on : February 19, 2009, 12:05 PM
+    Author     : Sukhdeep
+    Description:
+        Purpose of the document is to map SubscriptionFailBean class with the chargingdata view in the DataBase.
+-->
+
+<hibernate-mapping>
+    <class name="org.ariose.model.SubscriptionFailBean" table="subscription_fail">
+
+        <id name="id" column="id" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+        
+  	    <!-- manup 04/08/10 added this field for nazara-reliance integration -->
+        <property name="channelId" column="channel_id" not-null="false"/>
+
+        
+        <property name="subscriberNumber" column="subscriber_number" not-null="false"/>
+        <property name="subscriptionPackId" column="pack_id" not-null="false"/>
+        <property name="circleId" column="circle_id" not-null="false"/>
+        <property name="validDate" column="subscription_valid_date" not-null="false"/>
+        <property name="subscriptionStatus" column="subscription_status" not-null="false"/>
+        <property name="lowBalanceStatus" column="low_balance_action" not-null="false"/>
+        <property name="pvFailRowIdx" column="pv_fail_row_idx" not-null="false"/>
+        <property name="price" column="price" not-null="false"/>
+        <property name="validity" column="validity" not-null="false"/>
+        <property name="operator" column="operator" not-null="false"/>
+        <property name="packName" column="pack_name" not-null="false"/>
+        <property name="grace" column="grace" not-null="false"/>
+        <property name="waitPeriod" column="wait_period" not-null="false"/>
+        <property name="maxRetries" column="max_retries" not-null="false"/>
+        <property name="graceChargingTime" column="grace_charging_time" not-null="false"/>
+        <property name="nextChargingDate" column="nextcharging_date" not-null="false"/>
+        <property name="lowBalanceDays" column="low_balance_days" not-null="false"/>
+        <property name="contentDeliveryDate" column="content_delivery_date" not-null="false"/>
+        <property name="graceContentDays" column="grace_content_days" not-null="false"/>
+        <property name="activationDate" column="activation_date" not-null="false"/>
+        <property name="preRenewalDays" column="pre_renewal_days" not-null="false"/>
+     </class>
+</hibernate-mapping>

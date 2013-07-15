@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+    Document   : GraceRenewal.hbm.xml
+    Created on : March 10, 2009, 6:18 PM
+    Author     : A.Rahman
+    Description:
+        Purpose of the document is to map GraceRenewal class with the grace_active table in the DataBase.
+-->
+
+<hibernate-mapping>
+    <class name="org.ariose.model.GraceRenewal" table="grace_renewal">
+
+        <id name="id" column="id" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+        <property name="packID" column="pack_id" not-null="true"/>       
+        <property name="mon" column="mon" not-null="false"/>
+        <property name="tue" column="tue" not-null="false"/>
+        <property name="wed" column="wed" not-null="false"/>
+        <property name="thu" column="thu" not-null="false"/>
+        <property name="fri" column="fri" not-null="false"/>
+        <property name="sat" column="sat" not-null="false"/>
+        <property name="sun" column="sun" not-null="false"/>
+        <property name="isFrequency" column="isfrequency" not-null="false"/>
+        <property name="gracePeriod" column="grace_period" not-null="false"/>
+        <property name="graceContentdays" column="grace_content_days" not-null="false"/>
+    </class>
+</hibernate-mapping>
